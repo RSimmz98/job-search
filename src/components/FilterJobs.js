@@ -23,21 +23,21 @@ const Filterjobs = (props) => {
   }
 
   return (
-    <section>
-      <h1 className="text-center text-3xl">Search Jobs</h1>
+    <section className="text-center align-center p-4 m-4">
+      <h1 className="text-center text-white text-3xl bg-cyan-500 hover:bg-cyan-600">Search Jobs</h1>
       <div>
         <div>
           <input
-            className="bg-blue-500 align-center border-2px-solid-red-500"
+            className="border-2 m-4 border-rose-500"
             value={searchText}
             onChange={handleChange}
           />
         </div>
       </div>
       <div>
-        <label>Options</label>
+        <label >Options</label>
       </div>
-      <div>
+      <div >
         <div>
           <label>
             {" "}
@@ -46,6 +46,7 @@ const Filterjobs = (props) => {
               type="checkbox"
               checked={showOnlyFeaturedJobs}
               onChange={handleShowFeaturedOnlyChange}
+              className="mr-2"
             />
             Featured
           </label>
@@ -55,7 +56,8 @@ const Filterjobs = (props) => {
             <input id="remote" 
             type="checkbox" 
             checked={showOnlyRemoteJobs}
-            onChange={handleShowRemotOnlyChange}/>
+            onChange={handleShowRemotOnlyChange}
+            className="mr-2"/>
             Remote
           </label>
         </div>
